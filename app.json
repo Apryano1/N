@@ -37,7 +37,7 @@
     },
     "TZ": {
       "description": "ضع القاره / عاصمة بلدك ( اذا كنت لاتعرفه اتركة كما هوة )",
-      "value": "Asia/Baghdad",
+      "value": "Africa/Cairo",
       "required": false
     }
   },
