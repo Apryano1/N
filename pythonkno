@@ -4,7 +4,7 @@
 _get_ziplink () {
     local regex
     regex='(https?)://github.com/.+/.+'
-    if [[ $UPSTREAM_REPO == "TelethonAr" ]]
+    if [[ $UPSTREAM_REPO == "TelethonAl" ]]
     then
         echo "aHR0cHM6Ly9naXRodWIuY29tL3RlbGV0aG9uQXJhYi9pcXRob24vYXJjaGl2ZS9tYXN0ZXIuemlw" | base64 -d
     elif [[ $UPSTREAM_REPO =~ $regex ]]
@@ -24,7 +24,7 @@ _get_repolink () {
     local regex
     local rlink
     regex='(https?)://github.com/.+/.+'
-    if [[ $UPSTREAM_REPO == "TelethonAr" ]]
+    if [[ $UPSTREAM_REPO == "TelethonAl" ]]
     then
         rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL3RlbGV0aG9uQXJhYi9pcXRob24=" | base64 -d`
     elif [[ $UPSTREAM_REPO =~ $regex ]]
@@ -44,7 +44,7 @@ _run_python_code() {
 _run_catpack_git() {
     $(_run_python_code 'from git import Repo
 import sys
-OFFICIAL_UPSTREAM_REPO = "https://github.com/telethonArab/iqthon"
+OFFICIAL_UPSTREAM_REPO = "https://github.com/telethonalkasaah/iqthon"
 ACTIVE_BRANCH_NAME = "master"
 repo = Repo.init()
 origin = repo.create_remote("temponame", OFFICIAL_UPSTREAM_REPO)
@@ -83,11 +83,11 @@ _set_bot () {
     _run_cat_git
     python3 ../setup/updater.py ../requirements.txt requirements.txt
     chmod -R 755 bin
-    echo "    بدء تليثون العرب   "
+    echo "    بدء تليثون الكساح   "
     echo "
 
     "
-    python3 -m sourceklanr
+    python3 -m sourcealkasaah
 }
 
 _set_bot
